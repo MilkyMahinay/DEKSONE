@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESSENCE — Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Libre+Caslon+Display&family=Libre+Caslon+Text&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="site-header" data-page="events" data-tone="dark"></header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="page-title">
+      <p class="eyebrow">Plan your looks</p>
+      <h1 class="page-title" id="page-title">EVENTS</h1>
+      <div class="hero-row">
+        <p class="page-lede">What is coming up, and what you will wear. Each event shows the outfit planned for it.</p>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <div class="ev-layout">
+      <div class="ev-main">
+        <div class="week" id="week" aria-label="The next seven days"></div>
+        <div class="events" id="events"></div>
+      </div>
+
+      <aside class="ev-aside">
+        <div class="ev-photo">
+          <img class="photo" src="images/events/event-photo-new.png" alt="Fashion editorial with a model in a navy cap and cream outfit">
+          <div class="ev-photo-copy">
+            <p class="eyebrow">Dress for the moment</p>
+            <h2>Make every occasion your own.</h2>
+          </div>
+        </div>
+
+        <!-- Visual only: not interactive -->
+        <div class="plan-card" aria-hidden="true">
+          <h2>Plan an Event</h2>
+          <div class="signin-field">EVENT NAME</div>
+          <div class="signin-field">DATE AND TIME</div>
+          <div class="signin-field">LOCATION</div>
+          <div class="signin-field">PLANNED OUTFIT</div>
+          <span class="btn-black">ADD EVENT</span>
+        </div>
+      </aside>
+    </div>
+
+    <section class="full-calendar" aria-labelledby="calendar-title">
+      <div class="calendar-heading">
+        <div>
+          <p class="eyebrow">Your month at a glance</p>
+          <h2 id="calendar-title">EVENT CALENDAR</h2>
+        </div>
+        <div class="calendar-controls" role="group" aria-label="Change calendar month">
+          <button id="calendar-prev" type="button" aria-label="Previous month">‹</button>
+          <span id="calendar-month" aria-live="polite"></span>
+          <button id="calendar-next" type="button" aria-label="Next month">›</button>
+        </div>
+      </div>
+      <div class="month-grid" id="month-grid" role="grid" aria-label="Monthly event calendar"></div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="site.js"></script>
+  <script src="events.js"></script>
+</body>
+</html>

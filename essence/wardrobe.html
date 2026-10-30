@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESSENCE — My Wardrobe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Libre+Caslon+Display&family=Libre+Caslon+Text&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="site-header" data-page="wardrobe" data-tone="dark"></header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="page-title">
+      <p class="eyebrow">Your collection</p>
+      <h1 class="page-title" id="page-title">MY WARDROVE</h1>
+      <div class="hero-row">
+        <p class="page-lede">Every piece you own, organised by category. Combine them in Outfits, or plan what to wear in Events.</p>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <figure class="w-editorial">
+      <img class="photo" src="images/wardrobe/editorial.jpg" alt="Cropped sideways portrait above four repeated figures walking in black dresses and red sneakers">
+    </figure>
+
+    <section class="w-feature" aria-label="Featured piece">
+      <div id="w-feature"></div>
+      <div class="w-feature-text">
+        <p class="eyebrow">Featured piece</p>
+        <h2 id="w-feature-name"></h2>
+        <p>Top</p>
+      </div>
+    </section>
+
+    <section class="wardrobe-upload" aria-labelledby="upload-title">
+      <div class="upload-intro">
+        <p class="eyebrow">Make it yours</p>
+        <h2 id="upload-title">Add a piece to your wardrobe.</h2>
+        <p>Add a name, choose a category, and select a photo to preview it in your collection.</p>
+      </div>
+      <form class="upload-form" id="upload-form">
+        <label class="upload-photo" for="clothing-photo">
+          <img id="photo-preview" alt="" hidden>
+          <span id="photo-prompt">CHOOSE A PHOTO</span>
+          <input id="clothing-photo" type="file" accept="image/*" required>
+        </label>
+        <div class="upload-fields">
+          <label for="clothing-name">Clothing name</label>
+          <input id="clothing-name" name="name" type="text" maxlength="40" placeholder="e.g. Favourite denim jacket" required>
+          <label for="clothing-category">Category</label>
+          <select id="clothing-category" name="category" required>
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+            <option value="shoes">Shoes</option>
+            <option value="accessory">Accessories</option>
+          </select>
+          <button type="submit" class="upload-submit">ADD TO WARDROBE</button>
+          <p class="upload-message" id="upload-message" role="status" aria-live="polite">Demo only: your photo is previewed in this browser and is not saved.</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="catalog" id="catalog" aria-label="Clothing catalog"></section>
+
+    <section class="w-banner" aria-label="Closing photograph">
+      <img class="photo" src="images/wardrobe/closing.png" alt="Men and women showing a range of casual outfits">
+      <div class="w-banner-copy">
+        <p class="eyebrow">The everyday edit</p>
+        <h2>Wear what feels like you.</h2>
+        <a class="text-link" href="#catalog">EXPLORE THE WARDROBE <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="site.js"></script>
+  <script src="wardrobe.js"></script>
+</body>
+</html>
