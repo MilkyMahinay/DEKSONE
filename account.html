@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESSENCE — Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Libre+Caslon+Display&family=Libre+Caslon+Text&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header" data-page="account" data-tone="dark"></header>
+
+  <main class="account-page">
+    <section class="account-gallery" aria-label="Fashion portraits">
+      <img class="account-hood" src="images/account/hooded-model.png" alt="Model in a dark hood and red-tinted goggles">
+      <img class="account-outfits" src="images/account/collection-lineup.png" alt="Models wearing a coordinated collection in neutral tones">
+    </section>
+
+    <section class="account-card" aria-labelledby="account-title">
+      <p class="eyebrow">Your personal style space</p>
+      <h1 id="account-title">Welcome to ESSENCE</h1>
+      <div class="account-tabs" role="group" aria-label="Choose account action">
+        <button class="account-tab active" type="button" data-mode="signin" aria-pressed="true">SIGN IN</button>
+        <button class="account-tab" type="button" data-mode="register" aria-pressed="false">CREATE ACCOUNT</button>
+      </div>
+      <form id="account-form">
+        <label for="account-email">Email address</label>
+        <input id="account-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        <label for="account-password">Password</label>
+        <input id="account-password" name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="At least 8 characters">
+        <button class="account-submit" type="submit">CONTINUE</button>
+        <p id="account-message" class="account-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="account-note">Front-end demo only. A secure server is needed to create and protect real accounts.</p>
+    </section>
+  </main>
+
+  <footer class="account-footer">
+    <div class="account-footer-columns">
+      <section>
+        <h2>EXPLORE</h2>
+        <a href="outfits.html">Outfits</a>
+        <a href="events.html">Events</a>
+        <a href="wardrobe.html">My wardrobe</a>
+      </section>
+      <section>
+        <h2>ABOUT ESSENCE</h2>
+        <p>Thoughtful style starts with the pieces that feel right to you.</p>
+        <a href="home.html">Our approach</a>
+      </section>
+      <section>
+        <h2>ACCOUNT</h2>
+        <a href="account.html">Sign in</a>
+        <a href="account.html">Create an account</a>
+        <a href="mailto:hello@essence.example">Contact us</a>
+      </section>
+      <section class="account-footer-note">
+        <h2>STAY IN TOUCH</h2>
+        <p>Discover new ways to make your wardrobe your own.</p>
+        <a href="mailto:hello@essence.example">SAY HELLO <span aria-hidden="true">↗</span></a>
+      </section>
+    </div>
+    <div class="account-footer-bottom">
+      <a href="home.html">ESSENCE</a>
+      <span>MINIMAL. INTENTIONAL. ESSENTIAL.</span>
+      <span>© ESSENCE</span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="site.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>

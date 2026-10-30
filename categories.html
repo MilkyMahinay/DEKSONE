@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESSENCE — Categories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Libre+Caslon+Display&family=Libre+Caslon+Text&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="site-header" data-page="categories" data-tone="dark"></header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="page-title">
+      <p class="eyebrow">Shop by</p>
+      <h1 class="page-title" id="page-title">CATEGORIES</h1>
+      <div class="hero-row">
+        <p class="page-lede">Choose a category to see every piece in it. Choose it again to go back to all pieces.</p>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- Category cards (these are the category selectors) -->
+    <section class="cat-cards" id="cat-cards" aria-label="Choose a category"></section>
+
+    <!-- Results for the chosen category -->
+    <section class="results" id="results" aria-live="polite">
+      <div class="tabs" id="tabs" role="group" aria-label="Filter by category"></div>
+      <div class="results-head">
+        <h2 id="results-title"></h2>
+        <span class="count" id="results-count"></span>
+      </div>
+      <div class="pgrid" id="results-grid"></div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="site.js"></script>
+  <script src="categories.js"></script>
+</body>
+</html>
